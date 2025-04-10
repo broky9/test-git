@@ -21,7 +21,7 @@ import { ref } from 'vue'
 import Elige from './team-player/Elige.vue';
 import useUtils from '@/hooks/useUtils';
 
-const proName = ref('')
+const proName = ref('12')
 
 const { getPicFile } = useUtils();
 
