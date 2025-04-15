@@ -3,13 +3,18 @@
     {{ nickName }}
     <button @click="changeName()"> 修改名字 </button>
     <button @click="changeFaze($parent)">修改faze</button>
+    <button @click="useCodeD().getCode()">获取验证码</button>
 </template>
 
 <script setup>
 
+import useCode from '../../../hooks/useCode'
+
 defineProps(['nickName'])
 
 const emit = defineEmits(['change-name'])
+
+const useCodeD = useCode;
 
 
 const changeName = () => {
